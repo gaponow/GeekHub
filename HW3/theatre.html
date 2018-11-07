@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Theatre</title>
+<link rel="stylesheet" href="reset.css">
 <style>
     h1 {
         margin: 0;
@@ -50,7 +51,7 @@
         -webkit-appearance: none;
    }
     .header-text {
-        text-align: center;
+        margin: 15px 0 0 0;
     }
     .picture {
         width: 100%;
@@ -77,7 +78,7 @@
            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
            background: url("img/carousel-arrow-dark.png") 50% 50%/20px no-repeat;
        }
-    .arrow-prev{
+    .arrow-prev {
          left:0;
         -webkit-transform: rotate(180deg);
         transform: rotate(180deg);
@@ -88,23 +89,23 @@
     .light {
         color: white;
     }
-    .arrow{
+    .arrow {
         background:url("img/carousel-arrow-light.png")50%50%/20px no-repeat;
     }
-    [id^="target-item"]{
+    [id^="target-item"] {
         display:none;
     }
-    .item-1{
+    .item-1 {
         z-index:2;
         opacity:1;
     }
-    *:target~.item-1{
+    *:target~.item-1 {
         opacity:0;
     }
-    #target-item-1:target~.item-1{
+    #target-item-1:target~.item-1 {
         opacity:1;
     }
-    #target-item-2:target~.item-2,#target-item-3:target~.item-3{
+    #target-item-2:target~.item-2,#target-item-3:target~.item-3 {
         z-index:3;
         opacity:1;
     }
@@ -138,13 +139,17 @@
         display: flex;
         justify-content: center;
     }
-    .main_block__elem1 {
+    .main_section__p {
         width: 60%;
     }
     h2 {
         color: #E14827;
         font-size: 30px;
+		margin: 10px 0 10px 0;
     }
+	h3 {
+		margin: 5px 0 5px 0;
+	}
     section {
         margin-bottom: 40px;
     }
@@ -182,13 +187,13 @@
     footer {
         border-top: 4px solid #D73A2C;
     }
-    .footer_block1 {
+    .footer_div1 {
         display: flex;
         justify-content: center;
-        margin: 20px 0 0 200px;
+        margin: 20px 0 20px 200px;
     }
-    .footer_block2 {
-        margin-left: 200px;
+    .footer_div2 {
+        margin: 0 0 0 200px;
     }
     .footer_img {
         width: 20px;
@@ -220,7 +225,7 @@
 </head>
 <body>
     <header class="header">
-        <h1>Театр ім. Т.Г.Шевченка<img class="logo" src="img/log.png" alt="Logo"></h1>
+        <h1>Театр ім. Т.Г.Шевченка<a href="#"><img class="logo" src="img/log.png" alt="Logo"></a></h1>
         <p class="header-text"><a class="header-a" href="#">Головна</a>
         <a class="header-a" href="#">Афіша</a>
         <a class="header-a" href="#">Репертуар</a>
@@ -272,7 +277,7 @@
                 <a class="main_aside_a" href="#">
                 <img src="img/news.png" alt="News">
                 <h3>Назва новини</h3>
-                <p class="main_block__elem1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                <p class="main_section__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua.</p>
                 </a>
             </section>
@@ -280,7 +285,7 @@
                 <a class="main_aside_a" href="#">
                 <img src="img/news.png" alt="News">
                 <h3>Назва новини</h3>
-                <p class="main_block__elem1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                <p class="main_section__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua.</p></a>
             </section>
         </div>
@@ -300,10 +305,10 @@
     </aside>
     </div>
     <div class="top_block">
-        <a href="#" title="Вернуться к началу" class="top_button"><img src="img/arrow.png"></a>
+        <a href="#" title="Повернутись на початок" class="top_button"><img src="img/arrow.png"></a>
     </div>
     <footer>
-        <div class="footer_block1">
+        <div class="footer_div1">
            <div><a class="footer_a" href="#">Головна</a>
            <a class="footer_a" href="#">Афіша</a>
            <a class="footer_a" href="#">Репертуар</a>
@@ -313,16 +318,13 @@
            <a class="footer_a" href="#">Контакти</a>
            <a class="footer_a" href="#">Фестивалі</a>
         </div>
-        <div class="footer_block2">
-            <a href="#"><img class="footer_img" src="img/vk.png"></a>
-            <a href="#"><img class="footer_img" src="img/google.png"></a>
-            <a href="#"><img class="footer_img" src="img/facebook.png"></a>
-            <a href="#"><img class="footer_img" src="img/twitter.png"></a>
+        <div class="footer_div2">
+            <a href="#"><img class="footer_img" src="img/vk.png" alt="VK"></a>
+            <a href="#"><img class="footer_img" src="img/google.png" alt="Google"></a>
+            <a href="#"><img class="footer_img" src="img/facebook.png" alt="FB"></a>
+            <a href="#"><img class="footer_img" src="img/twitter.png" alt="TW"></a>
         </div>
         </div>
     </footer>
 </body>
-
-
-
 </html>
