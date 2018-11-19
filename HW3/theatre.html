@@ -1,245 +1,31 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Theatre</title>
-<link rel="stylesheet" href="reset.css">
-<style>
-    h1 {
-        margin: 0;
-        padding: 0;
-        font-size: 0;
-    }
-    .logo {
-        width: 140px;
-        height: 50px;
-    }
-    select {
-        border:0;
-    }
-    .header-a {
-        padding: 5px;
-        margin: 6px;
-        color: white;
-        text-align: center;
-    }
-    .header-a:link {
-        text-decoration: none;
-    }
-    .header-a:visited {
-        text-decoration: none;
-    }
-    .header-a:active {
-        text-decoration: none;
-    }
-    .header-a:hover {
-        text-decoration: none;
-        color: black;
-        background-color: whitesmoke;
-    }
-    .header {
-        display: flex;
-        justify-content: center;
-        background-color: #C92329;
-
-    }
-    .lang {
-        margin-left: 30px;
-        border-radius: 50px;
-        background-color: #b7b7b7;
-        -moz-appearance: none;
-        -webkit-appearance: none;
-   }
-    .header-text {
-        margin: 15px 0 0 0;
-    }
-    .picture {
-        width: 100%;
-    }
-    .carousel-wrapper {
-        position: relative;
-        overflow: hidden;
-    }
-    .carousel-item {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 25px 50px;
-        opacity: 0;
-    }
-    .arrow {
-           position: absolute;
-           top: 0;
-           display: block;
-           width: 50px;
-           height: 100%;
-           -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-           background: url("img/carousel-arrow-dark.png") 50% 50%/20px no-repeat;
-       }
-    .arrow-prev {
-         left:0;
-        -webkit-transform: rotate(180deg);
-        transform: rotate(180deg);
-     }
-    .arrow-next {
-        right: 0;
-    }
-    .light {
-        color: white;
-    }
-    .arrow {
-        background:url("img/carousel-arrow-light.png")50%50%/20px no-repeat;
-    }
-    [id^="target-item"] {
-        display:none;
-    }
-    .item-1 {
-        z-index:2;
-        opacity:1;
-    }
-    *:target~.item-1 {
-        opacity:0;
-    }
-    #target-item-1:target~.item-1 {
-        opacity:1;
-    }
-    #target-item-2:target~.item-2,#target-item-3:target~.item-3 {
-        z-index:3;
-        opacity:1;
-    }
-    nav {
-        font-size: 18px;
-        margin: 20px 100px 0 150px;
-        width: 17%;
-    }
-    .nav-a {
-        text-decoration:none;
-        color: black;
-    }
-    .nav-a:link {
-        text-decoration:none;
-    }
-    .nav-a:visited {
-        text-decoration:none;
-    }
-    .nav-a:active {
-        text-decoration:none;
-    }
-    .nav-a:hover {
-        text-decoration:none;
-        color: red;
-    }
-    img {
-        padding-right: 5px;
-    }
-    main {
-        position: relative;
-        display: flex;
-        justify-content: center;
-    }
-    .main_section__p {
-        width: 60%;
-    }
-    h2 {
-        color: #E14827;
-        font-size: 30px;
-		margin: 10px 0 10px 0;
-    }
-	h3 {
-		margin: 5px 0 5px 0;
-	}
-    section {
-        margin-bottom: 40px;
-    }
-    .main_aside_a {
-        text-decoration:none;
-        color: black;
-        display: block;
-    }
-    .main_aside_a:link {
-        text-decoration:none;
-    }
-    .main_aside_a:visited {
-        text-decoration:none;
-    }
-    .main_aside_a:active {
-        text-decoration:none;
-    }
-    .main_aside_a:hover {
-        text-decoration:none;
-        color: gray;
-    }
-    .content {
-        display: flex;
-    }
-    .top_block {
-        width: 42px;
-        height: 42px;
-        border-radius: 4px;
-        background-color: #cd2e2d;
-        text-align: center;
-        position: fixed;
-        bottom: 50px;
-        right: 50px;
-    }
-    footer {
-        border-top: 4px solid #D73A2C;
-    }
-    .footer_div1 {
-        display: flex;
-        justify-content: center;
-        margin: 20px 0 20px 200px;
-    }
-    .footer_div2 {
-        margin: 0 0 0 200px;
-    }
-    .footer_img {
-        width: 20px;
-        height: 20px;
-        opacity: 0.4;
-    }
-    .footer_img:hover {
-        opacity: 1;
-    }
-    .footer_a {
-        text-decoration: none;
-        color: grey;
-        margin-right: 10px;
-    }
-    .footer_a:active {
-        text-decoration: none;
-    }
-    .footer_a:visited {
-        text-decoration: none;
-    }
-    .footer_a:link {
-        text-decoration: none;
-    }
-    .footer_a:hover {
-        text-decoration: none;
-        color: red;
-    }
-</style>
+	<meta charset="UTF-8">
+	<title>Theatre</title>
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"> 
 </head>
 <body>
-    <header class="header">
+    <nav class="header">
         <h1>Театр ім. Т.Г.Шевченка<a href="#"><img class="logo" src="img/log.png" alt="Logo"></a></h1>
-        <p class="header-text"><a class="header-a" href="#">Головна</a>
-        <a class="header-a" href="#">Афіша</a>
-        <a class="header-a" href="#">Репертуар</a>
-        <a class="header-a" href="#">Новини</a>
-        <a class="header-a" href="#">Про театр</a>
-        <a class="header-a" href="#">Персоналії</a>
-        <a class="header-a" href="#">Контакти</a>
-        <a class="header-a" href="#">Фестивалі</a></p>
+        <ul class="header-text">
+			<li><a class="header-a" href="#">Головна</a></li>
+			<li><a class="header-a" href="#">Афіша</a></li>
+			<li><a class="header-a" href="#">Репертуар</a></li>
+			<li><a class="header-a" href="#">Новини</a></li>
+			<li><a class="header-a" href="#">Про театр</a></li>
+			<li><a class="header-a" href="#">Персоналії</a></li>
+			<li><a class="header-a" href="#">Контакти</a></li>
+			<li><a class="header-a" href="#">Фестивалі</a></li>
+		</ul>
         <select class="lang" name="lang">
             <option selected>Укр</option>
             <option>Рус</option>
             <option>Eng</option>
         </select>
-    </header>
+    </nav>
     <div class="carousel-wrapper" style="height: 400px;">
         <span id="target-item-1"></span>
         <span id="target-item-2"></span>
@@ -261,70 +47,67 @@
         </div>
     </div>
     <div class="content">
-    <nav>
-        <table class="nav_table">
-            <tr><td><a class="nav-a" href="#"><img src="img/nav-icon1.png">Фотоархів</a></td></tr>
-            <tr><td><a class="nav-a" href="#"><img src="img/nav-icon2.png">Відеоархів</a></td></tr>
-            <tr><td><a class="nav-a" href="#"><img src="img/nav-icon3.png">Піклувальна рада</a></td></tr>
-            <tr><td><a class="nav-a" href="#"><img src="img/nav-icon4.png">Партнери</a></td></tr>
-            <tr><td><a class="nav-a" href="#"><img src="img/nav-icon5.png">Форум</a></td></tr>
-        </table>
-    </nav>
-    <main>
-        <div>
-            <h2>Новини</h2>
-            <section>
-                <a class="main_aside_a" href="#">
-                <img src="img/news.png" alt="News">
-                <h3>Назва новини</h3>
-                <p class="main_section__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</p>
-                </a>
-            </section>
-            <section>
-                <a class="main_aside_a" href="#">
-                <img src="img/news.png" alt="News">
-                <h3>Назва новини</h3>
-                <p class="main_section__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua.</p></a>
-            </section>
-        </div>
-    </main>
-    <aside>
-        <div>
-            <h2>Галерея</h2>
-            <a class="main_aside_a" href="#"><img src="img/gallery.png" alt="Gallery">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p></a>
-        </div>
-        <div>
-            <h2>Відео</h2>
-            <video controls poster="img/poster.png">
-                <source src="https://www.youtube.com/watch?v=EwLQh0WwaRQ" type="video/mp4">
-            </video>
-        </div>
-    </aside>
+		<nav class="nav">
+			<ul class="nav_table">
+				<li><a class="nav-a" href="#"><img src="img/nav-icon1.png">Фотоархів</a></li>
+				<li><a class="nav-a" href="#"><img src="img/nav-icon2.png">Відеоархів</a></li>
+				<li><a class="nav-a" href="#"><img src="img/nav-icon3.png">Піклувальна рада</a></li>
+				<li><a class="nav-a" href="#"><img src="img/nav-icon4.png">Партнери</a></li>
+				<li><a class="nav-a" href="#"><img src="img/nav-icon5.png">Форум</a></li>
+			</ul>
+		</nav>
+		<main>
+			<div>
+				<h2>Новини</h2>
+				<section>
+					<a class="main_aside_a" href="#">
+					<img src="img/news.png" alt="News">
+					<h3>Назва новини</h3>
+					<p class="main_section__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua.</p>
+					</a>
+				</section>
+				<section>
+					<a class="main_aside_a" href="#">
+					<img src="img/news.png" alt="News">
+					<h3>Назва новини</h3>
+					<p class="main_section__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.</p></a>
+				</section>
+			</div>
+		</main>
+		<aside>
+			<div>
+				<h2>Галерея</h2>
+				<a class="main_aside_a" href="#"><img src="img/gallery.png" alt="Gallery">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p></a>
+			</div>
+			<div>
+				<h2>Відео</h2>
+				<video controls poster="img/poster.png">
+					<source src="https://www.youtube.com/watch?v=EwLQh0WwaRQ" type="video/mp4">
+				</video>
+			</div>
+		</aside>
     </div>
-    <div class="top_block">
-        <a href="#" title="Повернутись на початок" class="top_button"><img src="img/arrow.png"></a>
-    </div>
+    <a href="#" title="Повернутись на початок" class="top_button"><img src="img/arrow.png"></a>
     <footer>
-        <div class="footer_div1">
-           <div><a class="footer_a" href="#">Головна</a>
-           <a class="footer_a" href="#">Афіша</a>
-           <a class="footer_a" href="#">Репертуар</a>
-           <a class="footer_a" href="#">Новини</a>
-           <a class="footer_a" href="#">Про театр</a>
-           <a class="footer_a" href="#">Персоналії</a>
-           <a class="footer_a" href="#">Контакти</a>
-           <a class="footer_a" href="#">Фестивалі</a>
-        </div>
-        <div class="footer_div2">
-            <a href="#"><img class="footer_img" src="img/vk.png" alt="VK"></a>
-            <a href="#"><img class="footer_img" src="img/google.png" alt="Google"></a>
-            <a href="#"><img class="footer_img" src="img/facebook.png" alt="FB"></a>
-            <a href="#"><img class="footer_img" src="img/twitter.png" alt="TW"></a>
-        </div>
-        </div>
+        <ul class="footer_ul">
+		   <li><a class="footer_a" href="#">Головна</a></li>
+           <li><a class="footer_a" href="#">Афіша</a></li>
+           <li><a class="footer_a" href="#">Репертуар</a></li>
+           <li><a class="footer_a" href="#">Новини</a></li>
+           <li><a class="footer_a" href="#">Про театр</a></li>
+           <li><a class="footer_a" href="#">Персоналії</a></li>
+           <li><a class="footer_a" href="#">Контакти</a></li>
+           <li><a class="footer_a" href="#">Фестивалі</a></li>
+        </ul>
+        <ul class="footer_ul2">
+            <li><a href="#"><img class="footer_img" src="img/vk.png" alt="VK"></a></li>
+            <li><a href="#"><img class="footer_img" src="img/google.png" alt="Google"></a></li>
+            <li><a href="#"><img class="footer_img" src="img/facebook.png" alt="FB"></a></li>
+            <li><a href="#"><img class="footer_img" src="img/twitter.png" alt="TW"></a></li>
+        </ul>
     </footer>
 </body>
 </html>
