@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		.border {
+			border: 2px solid;
+			width: 35%;
+			margin-bottom: 20px;
+		}
+		input {
+			width: 300px;
+			float: right;
+		}
+		p {
+			margin: 5px;
+		}
+		.class1 {
+			float: none;
+			width: 40px;
+		}
+		.class2 {
+			float: none;
+			width: 50px;
+			margin: 0 5px 0 5px;
+		}
+		.class3 {
+			float: none;
+			width: 0;
+
+		}
+		.class4 {
+			float: left;
+
+		}
+		.class5 {
+			float: left;
+			width: 150px;
+			margin-right: 20px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Редагувати профіль</h1>
+	<form>
+		<fieldset class="border">
+			<legend>Основна інформація</legend>
+			<p><label for="id">ID:</label>
+			<input disabled="" id="id" name="id" value="725" type="text"></p>
+			<p><label for="first_name">Ім'я:</label>
+			<input id="first_name" name="first_name" type="text"></p>
+			<p><label for="second_name">Прізвище:</label>
+			<input id="second_name" name="second_name" type="text"></p>
+			<p><label for="password">Пароль:</label>
+			<input name="password" id="password" placeholder="********" type="password"></p>
+			<p><label for="phone_number">Номер телефону:</label>
+			<input id="phone_number" name="phone_number" value="+380" type="tel"></p>
+			<p><label for="email">Email:</label>
+			<input id="email" name="email" placeholder="'your_email@gmail.com'" type="email"></p>
+			<p><label for="keep_email">Приховати мій email</label>
+			<input class="class1" id="keep_email" checked="" type="checkbox"></p>
+			<p><label for="dob">Дата народження:</label>
+			<input name="date" id="dob" type="date"></p>
+			<p><label for="web_site">Сайт/Блог</label>
+			<input name="web_site" id="web_site" placeholder="http://" type="text"></p>
+			<p><label for="about_me">Про себе:</label>
+			<input name="about_me" id="about_me" type="text"></p>
+			<p><label for="picture">Фото:</label>
+			<input id="picture" name="file" type="file"></p>
+		</fieldset>
+		<fieldset class="border">
+			<legend>Професійна інформація</legend>
+			<p><label for="range">Бажання навчатись</label>
+			<input name="range" id="range" type="range"></p>
+			<p><label for="exp">Досвід</label>
+			<input class="class2" min="0" max="50" name="exp" id="exp" type="number" value="0">років </p>
+			<div class="pad">Рівень знань
+				<p><input class="class3" name="dev" id="dev1" checked type="radio">
+				<label for="dev1">Learning to Program</label></p>
+				<p><input class="class3" name="dev" id="dev2" type="radio">
+				<label for="dev2">Junior Developer</label></p>
+				<p><input class="class3" name="dev" id="dev3" type="radio">
+				<label for="dev3">Mid-Level Developer</label></p>
+				<p><input class="class3" name="dev" id="dev4" type="radio">
+				<label for="dev4">Senior Developer</label></p>
+			</div>
+			<p class="pad">Країна
+				<select title="Оберіть країну" name="country" required>
+					<option disabled selected>Оберіть країну</option>
+					<option value="Ukraine">Україна</option>
+					<option disabled>—————————————</option>
+					<option value="Russia">Росія</option>
+					<option value="Other">Інша</option>
+				</select>
+			</p>
+			<div class="class4">
+				<p><input name="checkbox" id="chk1" type="checkbox">
+				<label for="chk1">HTML</label></p>
+				<p><input name="checkbox" id="chk2" type="checkbox">
+				<label for="chk2">CSS</label></p>
+				<p><input name="checkbox" id="chk3" type="checkbox">
+				<label for="chk3">JavaScript</label></p>
+				<p><input name="checkbox" id="chk4" type="checkbox">
+				<label for="chk4">R</label></p>
+				<p><input name="checkbox" id="chk5" type="checkbox">
+				<label for="chk5">Scala</label></p>
+				<p><input name="checkbox" id="chk6" type="checkbox">
+				<label for="chk6">Haskell</label></p>
+				<input type="hidden" name="hidden">
+			</div>
+		</fieldset>
+		<input class="class5" type="reset" name="reset" value="Відмінити">
+		<input class="class5" type="submit" name="submit" value="Підтвердити">
+	</form>
+</body>
+</html>
+

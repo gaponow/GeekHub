@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Theatre</title>
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"> 
+</head>
+<body>
+    <nav class="header">
+        <h1>Театр ім. Т.Г.Шевченка<a href="#"><img class="logo" src="img/log.png" alt="Logo"></a></h1>
+        <ul class="header-text">
+			<li><a class="header-a" href="#">Головна</a></li>
+			<li><a class="header-a" href="#">Афіша</a></li>
+			<li><a class="header-a" href="#">Репертуар</a></li>
+			<li><a class="header-a" href="#">Новини</a></li>
+			<li><a class="header-a" href="#">Про театр</a></li>
+			<li><a class="header-a" href="#">Персоналії</a></li>
+			<li><a class="header-a" href="#">Контакти</a></li>
+			<li><a class="header-a" href="#">Фестивалі</a></li>
+		</ul>
+        <select class="lang" name="lang">
+            <option selected>Укр</option>
+            <option>Рус</option>
+            <option>Eng</option>
+        </select>
+    </nav>
+    <div class="carousel-wrapper" style="height: 400px;">
+        <span id="target-item-1"></span>
+        <span id="target-item-2"></span>
+        <span id="target-item-3"></span>
+        <div class="carousel-item item-1">
+            <p><img class="picture" src="img/picture.png" alt="picture"></p>
+            <a class="arrow arrow-prev" href="#target-item-3"></a>
+            <a class="arrow arrow-next" href="#target-item-2"></a>
+        </div>
+        <div class="carousel-item item-2 light">
+            <p><img class="picture" src="img/picture.png" alt="picture"></p>
+            <a class="arrow arrow-prev" href="#target-item-1"></a>
+            <a class="arrow arrow-next" href="#target-item-3"></a>
+        </div>
+        <div class="carousel-item item-3">
+            <p><img class="picture" src="img/picture.png" alt="picture"></p>
+            <a class="arrow arrow-prev" href="#target-item-2"></a>
+            <a class="arrow arrow-next" href="#target-item-1"></a>
+        </div>
+    </div>
+    <div class="content">
+		<nav class="nav">
+			<ul class="nav_table">
+				<li><a class="nav-a" href="#"><img src="img/nav-icon1.png">Фотоархів</a></li>
+				<li><a class="nav-a" href="#"><img src="img/nav-icon2.png">Відеоархів</a></li>
+				<li><a class="nav-a" href="#"><img src="img/nav-icon3.png">Піклувальна рада</a></li>
+				<li><a class="nav-a" href="#"><img src="img/nav-icon4.png">Партнери</a></li>
+				<li><a class="nav-a" href="#"><img src="img/nav-icon5.png">Форум</a></li>
+			</ul>
+		</nav>
+		<main>
+			<div>
+				<h2>Новини</h2>
+				<section>
+					<a class="main_aside_a" href="#">
+					<img src="img/news.png" alt="News">
+					<h3>Назва новини</h3>
+					<p class="main_section__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua.</p>
+					</a>
+				</section>
+				<section>
+					<a class="main_aside_a" href="#">
+					<img src="img/news.png" alt="News">
+					<h3>Назва новини</h3>
+					<p class="main_section__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.</p></a>
+				</section>
+			</div>
+		</main>
+		<aside>
+			<div>
+				<h2>Галерея</h2>
+				<a class="main_aside_a" href="#"><img src="img/gallery.png" alt="Gallery">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p></a>
+			</div>
+			<div>
+				<h2>Відео</h2>
+				<video controls poster="img/poster.png">
+					<source src="https://www.youtube.com/watch?v=EwLQh0WwaRQ" type="video/mp4">
+				</video>
+			</div>
+		</aside>
+    </div>
+    <a href="#" title="Повернутись на початок" class="top_button"><img src="img/arrow.png"></a>
+    <footer>
+        <ul class="footer_ul">
+		   <li><a class="footer_a" href="#">Головна</a></li>
+           <li><a class="footer_a" href="#">Афіша</a></li>
+           <li><a class="footer_a" href="#">Репертуар</a></li>
+           <li><a class="footer_a" href="#">Новини</a></li>
+           <li><a class="footer_a" href="#">Про театр</a></li>
+           <li><a class="footer_a" href="#">Персоналії</a></li>
+           <li><a class="footer_a" href="#">Контакти</a></li>
+           <li><a class="footer_a" href="#">Фестивалі</a></li>
+        </ul>
+        <ul class="footer_ul2">
+            <li><a href="#"><img class="footer_img" src="img/vk.png" alt="VK"></a></li>
+            <li><a href="#"><img class="footer_img" src="img/google.png" alt="Google"></a></li>
+            <li><a href="#"><img class="footer_img" src="img/facebook.png" alt="FB"></a></li>
+            <li><a href="#"><img class="footer_img" src="img/twitter.png" alt="TW"></a></li>
+        </ul>
+    </footer>
+</body>
+</html>
