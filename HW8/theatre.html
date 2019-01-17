@@ -3,38 +3,119 @@
 <head>
 <meta charset="UTF-8">
 <title>Theatre</title>
-<link rel="stylesheet" href="reset.css">
+<link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="header">
-        <h1>Театр ім. Т.Г.Шевченка<a href="#"><img class="logo" src="img/log.png" alt="Logo"></a></h1>
-        <p class="header-text"><a class="header-a" href="#">Головна</a>
-        <a class="header-a" href="#">Афіша</a>
-        <a class="header-a" href="#">Репертуар</a>
-        <a class="header-a" href="#">Новини</a>
-        <a class="header-a" href="#">Про театр</a>
-        <a class="header-a" href="#">Персоналії</a>
-        <a class="header-a" href="#">Контакти</a>
-        <a class="header-a" href="#">Фестивалі</a></p>
+        <h1>Театр ім. Т.Г.Шевченка
+			<a href="#"><img class="logo" src="img/log.png" alt="Logo"></a>
+		</h1>
+        <div class="header-text">
+			<a class="header-a" href="#">Головна</a>
+			<a class="header-a" href="#">Афіша</a>
+			<a class="header-a" href="#">Репертуар</a>
+			<a class="header-a" href="#">Новини</a>
+			<a class="header-a" href="#">Про театр</a>
+			<a class="header-a" href="#">Персоналії</a>
+			<a class="header-a" href="#">Контакти</a>
+			<a class="header-a" href="#">Фестивалі</a>
+		</div>
         <select class="lang" name="lang">
             <option selected>Укр</option>
             <option>Рус</option>
             <option>Eng</option>
         </select>
     </header>
+	<div>
 	<div class="gallery" data-gallery>
-		<img data-img src="img/picture.png" class="slider-img showed">
-		<img data-img src="img/picture.png" class="slider-img">
-		<img data-img src="img/picture.png" class="slider-img">
-		<img data-img src="img/picture.png" class="slider-img">
-		<button class="prev-btn" type="button" data-prev><img class="prev-btn-img" src="img/slider-arrow-left.png"></button>
-		<button class="next-btn" type="button" data-next><img class="next-btn-img" src="img/slider-arrow-right.png"></button>
-		<button class="date-btn1" type="button"><img src="img/date-button.png"></button>
-		<button class="date-btn2" type="button"><img src="img/date-button.png"></button>
-		<button class="date-btn3" type="button"><img src="img/date-button2.png"></button>
-		<button class="date-btn4" type="button"><img class="date-btn4-img" src="img/date-info.png"></button>
-		<button class="date-btn5" type="button"><img src="img/date-button.png"></button>
+		<div class="carusel">
+			<div class="photos">
+				<img data-img src="img/first-img.jpeg" class="slider-img showed">
+				<img data-img src="img/second-img.jpeg" class="slider-img">
+				<img data-img src="img/third-img.jpeg" class="slider-img">
+				<img data-img src="img/fourth-img.jpeg" class="slider-img">
+				<img data-img src="img/fifth-img.jpeg" class="slider-img">
+			</div>
+			<button class="prev-btn" type="button" data-prev>
+				<img class="prev-btn-img" src="img/slider-arrow-left.png">
+			</button>
+			<button class="next-btn" type="button" data-next>
+				<img class="next-btn-img" src="img/slider-arrow-right.png">
+			</button>
+			<ol data-slider class="slider">
+				<li>
+					<div data-elm class="slider-element elm1 active">
+						<span class="day">Чт</span>
+						<span class="number">17</span>
+						<span class="month">Січня</span>
+						<div class="description">
+							<h2>
+								<a href="#" title="Обережно жінки">ОБЕРЕЖНО ЖІНКИ</a>
+							</h2>
+							<p>Французька комедія</p>
+							<p>Місце проведення:</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div data-elm class="slider-element elm2">
+						<span class="day">Пт</span>
+						<span class="number">18</span>
+						<span class="month">Січня</span>
+						<div class="description">
+							<h2>
+								<a href="#" title="Троє Поросят">ТРОЄ ПОРОСЯТ</a>
+							</h2>
+							<p>Музична казка на 1 дію</p>
+							<p>Місце проведення:</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div data-elm class="slider-element elm3">
+						<span class="day">Сб</span>
+						<span class="number">19</span>
+						<span class="month">Січня</span>
+						<div class="description">
+							<h2>
+								<a href="#" title="Коляда">"КОЛЯДА"</a>
+							</h2>
+							<p>Різдвяний концерт на дві дії</p>
+							<p>Місце проведення:</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div data-elm class="slider-element elm4">
+						<span class="day">Нд</span>
+						<span class="number">20</span>
+						<span class="month">Січня</span>
+						<div class="description">
+							<h2>
+								<a href="#" title="Мартин Боруля">Мартин Боруля</a>
+							</h2>
+							<p>Комедія</p>
+							<p>Місце проведення:</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div data-elm class="slider-element elm5">
+						<span class="day">Пн</span>
+						<span class="number">21</span>
+						<span class="month">Січня</span>
+						<div class="description">
+							<h2>
+								<a href="#" title="Не турбувати! Шаленство в готельному люксі">НЕ ТУРБУВАТИ!</a>
+							</h2>
+							<p>Французька комедія</p>
+							<p>Місце проведення:</p>
+						</div>
+					</div>
+				</li>
+			</ol>
+		</div>
 	</div>
     <div class="content">
     <nav>
