@@ -6,32 +6,29 @@ function gallery(el) {
     let index = 0,
         index2 = 0;
 
-    function addClass(name, addName, content) {
-        if(elements[index + content].classList.contains(name)) {
-        elements[index + content].classList.add(addName);
-        } 
+    function addClass(content) {
+		if(elements[index + content].classList.contains(`elm${i + 1}`)) {
+		elements[index + content].classList.add(`elm${i + 1}_first`);
+		}
     };
 
-    function removeClass(name, remName, content) {
-        if(elements[index + content].classList.contains(name)) {
-        elements[index + content].classList.remove(remName);
+    function removeClass(content) {
+        if(elements[index + content].classList.contains(`elm${i + 1}`)) {
+        elements[index + content].classList.remove(`elm${i + 1}_first`);
         }
     };
 
     function prevElm() {
         elements[index].classList.remove('active');
         index--;
-        removeClass('elm1', 'elm1_first', 1);
-        removeClass('elm2', 'elm2_first', 1);
-        removeClass('elm3', 'elm3_first', 1);
-        removeClass('elm4', 'elm4_first', 1);
-        removeClass('elm5', 'elm5_first', 1);
+		for(i = 0; i < elements.length; i++) {
+			removeClass(1);
+		}
+
         if(index < 0) {
-            addClass('elm1', 'elm1_first', 1);
-            addClass('elm2', 'elm2_first', 2);
-            addClass('elm3', 'elm3_first', 3);
-            addClass('elm4', 'elm4_first', 4);
-            addClass('elm5', 'elm5_first', 5);
+			for(i = 0; i < elements.length; i++) {
+				addClass(i + 1);
+			}
             index = elements.length - 1;
         }
 
@@ -41,18 +38,14 @@ function gallery(el) {
     function nextElm() {
         elements[index].classList.remove('active');
         index++;
-        addClass('elm1', 'elm1_first', - 1);
-        addClass('elm2', 'elm2_first', - 1);
-        addClass('elm3', 'elm3_first', - 1);
-        addClass('elm4', 'elm4_first', - 1);
-        addClass('elm5', 'elm5_first', - 1);
+        for(i = 0; i < elements.length; i++) {
+			addClass(- 1);
+		}
         if(index >= elements.length) {
             index = 0;
-            removeClass('elm1', 'elm1_first', 0);
-            removeClass('elm2', 'elm2_first', 1);
-            removeClass('elm3', 'elm3_first', 2);
-            removeClass('elm4', 'elm4_first', 3);
-            removeClass('elm5', 'elm5_first', 4);
+            for(i = 0; i < elements.length; i++) {
+				removeClass(i);
+			}
         }
 
         elements[index].classList.add('active');
