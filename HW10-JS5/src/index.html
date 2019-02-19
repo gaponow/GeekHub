@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>ToDoList</title>
+</head>
+<body>
+<div class="wrapper">
+    <div class="task">
+        <div class="task__header">
+            <div class="task__title">
+                <span class="task__title-text">ToDoList</span>
+            </div>
+            <div class="task__info">
+                <div class="task__info-item">
+                    <span class="task__info-text">Всего задач</span>
+                    <span class="task__info-number all__tasks"></span>
+                </div>
+                <div class="task__info-item">
+                    <span class="task__info-text">Выполнено задач</span>
+                    <span class="task__info-number done__tasks"></span>
+                </div>
+            </div>
+        </div>
+        <div class="task__body">
+            <ul class="task__list"></ul>
+        </div>
+        <div class="task__footer">
+            <input class="task__new" placeholder="Add task and press 'Enter'">
+        </div>
+    </div>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
