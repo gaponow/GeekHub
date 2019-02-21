@@ -1,7 +1,42 @@
 window.onload = function () {
-  function doId() {
-    return Math.random().toString(36).slice(2);
+  const tasks = {
+    current: [{
+      taskId: doId(),
+      taskContent: 'Task 1',
+      taskState: 'current',
+    }, {
+      taskId: doId(),
+      taskContent: 'Task 2',
+      taskState: 'current',
+    }],
+    done: [{
+      taskId: doId(),
+      taskContent: 'Task 3',
+      taskState: 'done',
+    }],
+    get allTasks() {
+      return this.current.length + this.done.length;
+    },
+    get doneTasks() {
+      return this.done.length;
+    },
+  };
+  const tasksList = document.querySelector('.task__list');
+  const allTasks = document.querySelector('.all__tasks');
+  const doneTasks = document.querySelector('.done__tasks');
+  const addNewTaskField = document.querySelector('.task__new');
+
+  function INIT() {
+    for (const item of tasks.current) {
+      createItem(item);
+    }
+    for (const item of tasks.done) {
+      createItem(item);
+    }
+    allTasks.innerHTML = tasks.allTasks;
+    doneTasks.innerHTML = tasks.doneTasks;
   }
+
   function createItem(el) {
     const item = document.createElement('li');
     const remove = document.createElement('div');
@@ -14,43 +49,6 @@ window.onload = function () {
     text.addEventListener('click', function () {
       doneTask(this);
     });
-    const tasks = {
-      current: [{
-        taskId: doId(),
-        taskContent: 'Task 1',
-        taskState: 'current',
-      }, {
-        taskId: doId(),
-        taskContent: 'Task 2',
-        taskState: 'current',
-      }],
-      done: [{
-        taskId: doId(),
-        taskContent: 'Task 3',
-        taskState: 'done',
-      }],
-      get allTasks() {
-        return this.current.length + this.done.length;
-      },
-      get doneTasks() {
-        return this.done.length;
-      },
-    };
-    const tasksList = document.querySelector('.task__list');
-    const allTasks = document.querySelector('.all__tasks');
-    const doneTasks = document.querySelector('.done__tasks');
-    const addNewTaskField = document.querySelector('.task__new');
-
-    function INIT() {
-      for (const item of tasks.current) {
-        createItem(item);
-      }
-      for (const item of tasks.done) {
-        createItem(item);
-      }
-      allTasks.innerHTML = tasks.allTasks;
-      doneTasks.innerHTML = tasks.doneTasks;
-    }
     switch (el.taskState) {
       case 'done':
         item.classList.add('task__list-item', 'task__list-item--done');
@@ -69,6 +67,7 @@ window.onload = function () {
     const elem = el.parentNode;
     const elemId = elem.id;
     const elemState = elem.classList.contains('task__list-item--done');
+
     const [itemsRemove, itemsAdd] = elemState ? [tasks.done, tasks.current] : [tasks.current, tasks.done];
     elem.classList.toggle('task__list-item--done');
     for (const [index, item] of itemsRemove.entries()) {
@@ -103,6 +102,10 @@ window.onload = function () {
     tasks.current.push(elem);
     createItem(elem);
     allTasks.innerHTML = tasks.allTasks;
+  }
+
+  function doId() {
+    return Math.random().toString(36).slice(2);
   }
 
   INIT();
