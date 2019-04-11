@@ -1,0 +1,26 @@
+.task__header {
+  background-color: #ccc;
+}
+
+.task__title {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 8px 16px;
+  text-align: center;
+}
+
+.task__title-text {
+  color: darkblue;
+}
+
+.task__info {
+  display: flex;
+  padding: 8px 16px;
+}
+
+.task__info-item {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}

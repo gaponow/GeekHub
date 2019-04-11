@@ -1,0 +1,28 @@
+html,
+body {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  align-items: center;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.task {
+  box-shadow: 0 0 1px 0 black;
+  display: flex;
+  flex-direction: column;
+  max-width: 1366px;
+  width: 100%;
+}
+.task__list-item {
+  color: red;
+  background-color: red;
+}
