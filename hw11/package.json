@@ -1,0 +1,21 @@
+{
+  "name": "git",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^4.0.0",
+    "gulp-install": "^1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.14.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "gulp-sass": "^4.0.2",
+    "jest": "^24.1.0",
+    "node-sass": "^4.10.0"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
